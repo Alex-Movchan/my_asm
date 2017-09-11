@@ -63,6 +63,8 @@ void    ft_write_program(t_all *all, char *str);
 int     ft_coment(char *line);
 int     name_and_coment(int fd, int *i, t_all **all);
 char    *serch_coment(char *lin);
+void    ft_dell_all(t_all **all);
+int     ft_islabel(char *str, int *i, int *j, t_prog **prog);
 
 
 #endif //ASM_ASM_ds

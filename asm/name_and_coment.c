@@ -113,6 +113,7 @@ int     name_and_coment(int fd, int *i, t_all **all)
                 return (-1);
             }
             stop++;
+            ft_strdel(&line);
         }
         else if (!ft_strncmp(line + j, COMMENT_CMD_STRING, ft_strlen(COMMENT_CMD_STRING)))
         {
@@ -121,10 +122,13 @@ int     name_and_coment(int fd, int *i, t_all **all)
                 ft_strdel(&line);
                 return (-1);
             }
+            ft_strdel(&line);
             stop++;
         }
-        else
+        else {
+            ft_strdel(&line);
             return (my_erormanager(line, ft_tab(*i, j, 0), 9));
+        }
         if (stop == 2)
             break ;
     }

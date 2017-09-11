@@ -13,14 +13,18 @@ static t_prog  *last_elem(t_prog *prog)
 
 static int     valid_argument(char *str, int *i, int *j, t_prog **prog)
 {
+    int res;
+
     while (*str && *str < 33 && (*j)++)
         str++;
     if (str[0] == DIRECT_CHAR)
-        return (valid_direkt(str, i, j, prog));
+        res = valid_direkt(str, i, j, prog);
     else if (str[0] == 'r')
-        return (valid_registr(str, i, j, prog));
+        res = valid_registr(str, i, j, prog);
     else
-        return (valid_indir(str, i, j, prog));
+        res = valid_indir(str, i, j, prog);
+    free (i);
+    return (res);
 }
 
 static int     serch_argument(char **agr, int *i, int *j, t_all **all)
@@ -48,12 +52,24 @@ static int     serch_argument(char **agr, int *i, int *j, t_all **all)
     return (0);
 }
 
+void    ft_dell_arrey(char ***av)
+{
+    char    **buf;
+    int     i;
+
+    i = -1;
+    buf = *av;
+    while (buf[++i])
+        ft_strdel(&(buf[i]));
+    free(buf);
+    *av = NULL;
+}
+
 int     ft_argument(char *line, int *i, int *j, t_all **all)
 {
     char    *src;
     char    **argument;
     int     k;
-    t_prog  *prog;
 
     k = 0;
     src = line;
@@ -61,9 +77,11 @@ int     ft_argument(char *line, int *i, int *j, t_all **all)
         src++;
     if (!(argument = ft_strsplit(src, SEPARATOR_CHAR)) || !*argument)
         return (my_erormanager("\0", ft_tab(*i, *j, 0), 2));
-
     if (serch_argument(argument, i, j, all) == -1)
+    {
+        ft_dell_arrey(&argument);
         return (-1);
- //підрахунок розміру строки в хедер +=
+    }
+    ft_dell_arrey(&argument);
     return (0);
 }

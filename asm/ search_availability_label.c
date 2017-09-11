@@ -8,7 +8,6 @@ int     search_label_in_stak(t_stak *stak, char *name, t_prog **prog, int i)
         if (!ft_strcmp(stak->funk_name, name))
         {
             (*prog)->value[i] = (int)stak->caret_size - (int)(*prog)->caret;
-            ft_strdel(&name);
             return (1);
         }
         stak = stak->next;

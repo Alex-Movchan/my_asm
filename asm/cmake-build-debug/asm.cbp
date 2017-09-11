@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="asm"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="asm">
+				<Option output="/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/asm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 asm"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="asm/fast">
+				<Option output="/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/asm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 asm/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/a/amovchan/my_asm/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/ search_availability_label.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/asm.h">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/coding_byte.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/ft_argument.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/ft_compiler.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/ft_dell_all.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/ft_instruction.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/ft_size_program.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/argn.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/cast_duble2.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/caststr_a.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/caststra.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ceil_floar.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/format.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_accur.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_accur_digits.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_apostroph.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_atoi.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_bzero.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_casr_doubl.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_cast_dig2.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_cast_digit.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_cast_g.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_cast_size.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_cast_str.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_casta.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_castb.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_caststr_a.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_caststr_e.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_color.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_getstr.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_isalnum.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_isalpha.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_isascii.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_isdigit.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_isnegativ.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_isprint.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_isspace.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_itoa.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_itoa_base.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_len_int.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_ln_w.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_lst_len.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_lstadd.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_lstdel.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_lstdelone.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_lstiter.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_lstmap.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_lstnew.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_memalloc.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_memccpy.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_memchr.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_memcmp.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_memcpy.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_memcpy_rev.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_memdel.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_memmove.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_memset.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_nb_words.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_print.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_print_wchar.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_printf.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_putchar.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_putchar_fd.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_putendl.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_putendl_fd.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_putnbr.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_putnbr_fd.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_putstr.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_putstr_fd.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_specifiers.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_str_duble.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strcasr_p.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strcat.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strchr.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strclr.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strcmp.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strcpy.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strdel.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strdup.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strequ.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_striter.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_striteri.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strjoin.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strlcat.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strlen.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strmap.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strmapi.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strncat.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strncmp.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strncpy.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strndup.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strnequ.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strnew.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strnjoin.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strnstr.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strrchr.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strsplit.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strstr.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strsub.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_strtrim.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_struct_format.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_tolower.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_toupper.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/ft_width.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/get_next_line.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/itoa.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/libft.h">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/libft/pars.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/main.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/my_errormeneger.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/name_and_coment.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/op.h">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/serch_label.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/translation_into_bytcode.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/valid_direct.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/valid_indir.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/valid_registr.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/write_program.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/amovchan/my_asm/asm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,24 +1,33 @@
 
 #include "asm.h"
 
-static int     ft_islabel(char *str, int *i, int *j, t_prog **prog)
+int     ft_islabel(char *str, int *i, int *j, t_prog **prog)
 {
     char    *name;
     int     k;
     int     z;
 
     k = 2;
-    z = -1;
     if (str[2] < 33)
         return (my_erormanager("", ft_tab(i[0], (*j) + 2, 0), 1));
     (*prog)->i_j[0] = *i;
     (*prog)->i_j[1] = *j;
     while (str[k] && str[k] > 33)
         k++;
+    z = k;
+    while (str[z] && str[z] < 33)
+        z++;
+    if (str[z] != '\0')
+        return (my_erormanager(str + z, ft_tab(i[0], (*j) + z, 4), 2));
     name = (char*)malloc(sizeof(char) * k - 1);
-    k = 1;
+    k = 0;
+    z = -1;
     while (str[++k] && str[k] > 33)
+    {
+        if (str[k] == ':')
+            continue ;
         name[++z] = str[k];
+    }
     name[++z] = '\0';
     if (i[1] == 0)
         (*prog)->label1 = name;

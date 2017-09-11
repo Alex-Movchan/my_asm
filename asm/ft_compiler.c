@@ -21,16 +21,16 @@ static int     my_compile_file(int fd, char *str, char *name)
     all = ft_new_all(NULL);
     if (name_and_coment(fd, &i, &all) == -1)
     {
-        //  ft_dell_all(all);
+          ft_dell_all(&all);
         return (0);
     }
     if (translation_into_bytcode(fd, &i, NULL, &all) == -1)
     {
-      //  ft_dell_all(&all);
-        return (0);//dell lin?
+        ft_dell_all(&all);
+        return (0);
     }
     ft_write_program(all, name);
-    //  ft_dell_all(&all);
+    ft_dell_all(&all);
     return (1);
 }
 

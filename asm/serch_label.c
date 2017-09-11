@@ -64,14 +64,18 @@ int     ft_serch_label(char *line, int *i, int *j, t_all **all)
     while (line[(*j)] && line[(*j)] < 33)
         (*j)++;
     k = *j;
-    while ((line[k] >= 97 && line[k] <= 122) || (line[k] >= 48 && line[k] <= 57) || line[k] == '_')
+    while (ft_strchr(LABEL_CHARS, (int)line[k]))
         k++;
     if (line[k] >= 65 && line[k] <= 97)
         return (my_erormanager(NULL, ft_tab(*i, *j, 0), 1));
-    if (line[k] == LABEL_CHAR) {//new_funk
+    if (line[k] == LABEL_CHAR)
+    {
         name = ft_strnduplen(line, j, k);
         if ((serch_dublikat_label(name, *i, *j, all)) == -1)
+        {
+            ft_strdel(&name);
             return (-1);
+        }
         new_label(name, all);
         (*j)++;
     }

@@ -31,6 +31,5 @@ int     valid_registr(char *str, int *tab, int *j, t_prog **prog)
     if (nb <= 0 || nb > REG_NUMBER)
         return (my_erormanager(str, ft_tab(tab[0], *j, 1), 2));
     (*prog)->value[tab[1]] = nb;
-    free(tab);
     return (T_REG);
 }

@@ -33,5 +33,6 @@ int main(int argc, char **argv)
            ft_printf("Writing output program to %s\n", name);
         ft_strdel(&name);
     }
+    while (1);
     return (0);
 }

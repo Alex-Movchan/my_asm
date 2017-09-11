@@ -22,7 +22,7 @@
 # include <stdarg.h>
 
 # define A(x) (x < 0 ? -(x) : x)
-# define BUFF_SIZE 3
+# define BUFF_SIZE 10000
 
 typedef struct		s_list
 {

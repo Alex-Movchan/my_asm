@@ -7,9 +7,11 @@ static char *serch_name_instruction(char *line, int *i, int *j)
     int     len;
 
     len = *j;
+    name = NULL;
     while (line[len] && line[len] >= 97 && line[len] <= 122)
         len++;
-    name = ft_strnduplen(line, j, len);
+    if (len != 0)
+        name = ft_strnduplen(line, j, len);
     return (name);
 }
 
