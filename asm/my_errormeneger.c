@@ -68,6 +68,10 @@ static void	my_erormanager_2(char *str, int *tab, int error)
 		ft_printf("{fd}No such label %{fd}d while attempting to dereference "
 			"token [TOKEN][%{fd}03d{fd}:%{fd}03d{fd}] DIRECT_LABEL \""
 		"%{fd}s{fd}\"\n", 2, 2, tab[2], 2, tab[0], 2, 2, tab[1], 2, 2, str, 2);
+	else if (error == 6)
+		ft_printf("{fd}No such label %{fd}s {fd}while attempting to "
+			"dereference token [TOKEN][%{fd}03d{fd}:%{fd}03d{fd}] DIRECT_LABEL \":"
+			"%{fd}s{fd}\"\n", 2, 2, str, 2, 2, tab[0], 2, 2, tab[1], 2, 2, str, 2);
 	else if (error == 8)
 		ft_printf("{fd}Champion name too long (Max length 128)\n", 2);
 	else if (error == 9)
@@ -80,6 +84,7 @@ static void	my_erormanager_2(char *str, int *tab, int error)
 
 int			my_erormanager(char *str, int *tab, int error)
 {
+	write(1, "\a", 1);
 	tab[1]++;
 	if (error == 1)
 		ft_printf("{fd}Lexical error at [%{fd}d{fd}:%{fd}d{fd}]\n",
@@ -96,10 +101,6 @@ int			my_erormanager(char *str, int *tab, int error)
 		ft_printf("{fd}Invalid instruction at token [TOKEN]"
 					"[%{fd}03d{fd}:%{fd}03d{fd}] INSTRUCTION \"%{fd}s{fd}\"\n",
 				2, 2, tab[0], 2, 2, tab[1], 2, 2, str, 2);
-	else if (error == 6)
-		ft_printf("{fd}No such label %{fd}s {fd}while attempting to "
-		"dereference token [TOKEN][%{fd}03d{fd}:%{fd}03d{fd}] DIRECT_LABEL \":"
-		"%{fd}s{fd}\"\n", 2, 2, str, 2, 2, tab[0], 2, 2, tab[1], 2, 2, str, 2);
 	else
 		my_erormanager_2(str, tab, error);
 	free(tab);

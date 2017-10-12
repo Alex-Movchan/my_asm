@@ -48,13 +48,13 @@ int				ft_compiler(char *str, char *name)
 	if (!(str[ft_strlen(str) - 1] == 's'
 			&& str[ft_strlen(str) - 2] == '.'))
 	{
-		ft_printf("%{fd}s{fd}\n", 2,
+		ft_printf("\a%{fd}s{fd}\n", 2,
 				"Syntax error at token [TOKEN][001:001] END \"(null)\"", 2);
 		return (0);
 	}
 	if ((fd = open(str, O_RDONLY)) == -1)
 	{
-		ft_printf("%{fd}s %{fd}s\n", 2, "Can't read source file", 2, str);
+		ft_printf("\a%{fd}s %{fd}s\n", 2, "Can't read source file", 2, str);
 		close(fd);
 		return (0);
 	}

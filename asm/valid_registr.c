@@ -53,7 +53,7 @@ int			ft_stop_valod(char **line, int stop)
 		return (1);
 	else
 	{
-		ft_printf("%{fd}s{fd}\n", 2,
+		ft_printf("\a%{fd}s{fd}\n", 2,
 			"Syntax error at token [TOKEN][001:001] END \"(null)\"", 2);
 		return (-1);
 	}
