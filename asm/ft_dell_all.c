@@ -24,6 +24,7 @@ static void	dell_stack(t_stak **stak)
 		ft_strdel(&(liaks->funk_name));
 		free(liaks);
 	}
+	*stak = NULL;
 }
 
 static void	dell_program(t_prog **prog)
@@ -43,6 +44,7 @@ static void	dell_program(t_prog **prog)
 			ft_strdel(&(liaks->label3));
 		free(liaks);
 	}
+	*prog = NULL;
 }
 
 void		ft_dell_all(t_all **all)
@@ -52,4 +54,5 @@ void		ft_dell_all(t_all **all)
 	dell_stack(&(*all)->stak);
 	dell_program(&(*all)->prog);
 	free(*all);
+	*all = NULL;
 }

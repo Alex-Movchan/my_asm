@@ -43,12 +43,12 @@ static void				write_argument(int fd, t_prog *prog)
 			&& g_tab[prog->i].flag_direct_size == 1) || prog->arg[i] == T_IND)
 		{
 			nb = swap_bit((unsigned short)prog->value[i]);
-			write(fd, &nb, 2);
+			write(fd, &nb, sizeof(unsigned short));
 		}
 		else if (prog->arg[i] == T_DIR)
 		{
 			nb = rewers(prog->value[i]);
-			write(fd, &nb, 4);
+			write(fd, &nb, sizeof(unsigned int));
 		}
 	}
 }
@@ -78,7 +78,7 @@ void					ft_write_program(t_all *all, char *file_path)
 	write(fd, &megic, sizeof(unsigned int));
 	write(fd, all->header->prog_name, PROG_NAME_LENGTH + 4);
 	all->header->prog_size = rewers(all->header->prog_size);
-	write(fd, &all->header->prog_size, 4);
+	write(fd, &all->header->prog_size, sizeof(unsigned int));
 	write(fd, all->header->comment, COMMENT_LENGTH + 4);
 	ft_write_prigram_byt(all, fd);
 	close(fd);

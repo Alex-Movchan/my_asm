@@ -23,6 +23,22 @@ int			*ft_tab(int i, int j, int k)
 	return (tab);
 }
 
+static char	*ft_search_src(int flag)
+{
+	char	*src;
+
+	src = NULL;
+	if (flag == 4)
+		src = "DIRECT";
+	else if (flag == 3)
+		src = "INDIRECT";
+	else if (flag == 2)
+		src = "REGISTER";
+	else if (flag == 1)
+		src = "INSTRUCTION";
+	return (src);
+}
+
 static int	errorsintaks(char *str, int *tab)
 {
 	char	*src;
@@ -37,14 +53,8 @@ static int	errorsintaks(char *str, int *tab)
 	}
 	if (str[0] == ',')
 		src = "SEPARATOR";
-	else if (tab[2] == 4)
-		src = "DIRECT";
-	else if (tab[2] == 3)
-		src = "INDIRECT";
-	else if (tab[2] == 2)
-		src = "REGISTER";
-	else if (tab[2] == 1)
-		src = "INSTRUCTION";
+	else
+		src = ft_search_src(tab[2]);
 	ft_printf("{fd}Syntax error at token [TOKEN][%{fd}03d"
 			"{fd}:%{fd}03d{fd}] %{fd}s \"%{fd}s{fd}\"\n",
 			2, 2, tab[0], 2, 2, tab[1], 2, 2, src, 2, str, 2);
@@ -65,7 +75,7 @@ static void	my_erormanager_2(char *str, int *tab, int error)
 				"%{fd}03d{fd}]\n", 2, 2, tab[0], 2, 2, tab[1], 2);
 	else if (error == 10)
 		ft_printf("{fd}Syntax error - unexpected end of input "
-				"(Perhaps you forgot to end with a newline ?)", 2);
+				"(Perhaps you forgot to end with a newline ?)\n", 2);
 }
 
 int			my_erormanager(char *str, int *tab, int error)

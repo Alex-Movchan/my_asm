@@ -21,11 +21,7 @@ static void	name_lable(char *str, int *i, t_prog **prog, int k)
 	k = 0;
 	z = -1;
 	while (str[++k] && str[k] > 33)
-	{
-		if (str[k] == ':')
-			continue ;
 		name[++z] = str[k];
-	}
 	name[++z] = '\0';
 	if (i[1] == 0)
 		(*prog)->label1 = name;
@@ -40,13 +36,16 @@ int			ft_islabel(char *str, int *i, int *j, t_prog **prog)
 	int		k;
 	int		z;
 
-	k = 2;
-	if (str[2] < 33)
-		return (my_erormanager("", ft_tab(i[0], (*j) + 2, 0), 1));
+	k = 0;
+	if (str[1] < 33)
+		return (my_erormanager("", ft_tab(i[0], (*j) + 1, 0), 1));
 	(*prog)->i_j[0] = *i;
 	(*prog)->i_j[1] = *j;
-	while (str[k] && str[k] > 33)
-		k++;
+	while (str[++k] && str[k] > 33)
+	{
+		if (!ft_strchr(LABEL_CHARS, str[k]))
+			return (my_erormanager("", ft_tab(i[0], (*j) + k, 0), 1));
+	}
 	z = k;
 	while (str[z] && str[z] < 33)
 		z++;
@@ -65,7 +64,7 @@ int			valid_direkt(char *str, int *i, int *j, t_prog **prog)
 	if (str[0] == DIRECT_CHAR && str[1] < 33)
 		return (my_erormanager((str + k), ft_tab(i[0], (*j) + 1, 0), 1));
 	if (str[1] == LABEL_CHAR)
-		return (ft_islabel(str, i, j, prog));
+		return (ft_islabel(str + 1, i, j, prog));
 	if (str[k] == '-')
 		k++;
 	while (str[k] && ft_isdigit(str[k]))

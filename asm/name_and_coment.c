@@ -62,7 +62,7 @@ static int	ft_valid_name(char *lin, int *i, int fd, t_all **all)
 	*i = tab[1];
 	j = tab[0];
 	free(tab);
-	if (lin[j] != '\0' && lin[j] != '#' && lin[j] != ';')
+	if (lin[j] != '\0' && lin[j] != COMMENT_CHAR && lin[j] != ';')
 		return (my_erormanager(lin + j, ft_tab(*i, j, 1), 2));
 	return (0);
 }
@@ -137,5 +137,5 @@ int			name_and_coment(int fd, int *i, t_all **all)
 		if (stop == 2)
 			break ;
 	}
-	return (1);
+	return (ft_stop_valod(&line, stop));
 }

@@ -12,7 +12,7 @@
 
 #include "asm.h"
 
-static char	*serch_name_instruction(char *line, int *i, int *j)
+static char	*serch_name_instruction(char *line, int *j)
 {
 	char	*name;
 	int		len;
@@ -21,7 +21,7 @@ static char	*serch_name_instruction(char *line, int *i, int *j)
 	name = NULL;
 	while (line[len] && line[len] >= 97 && line[len] <= 122)
 		len++;
-	if (len != 0)
+	if (len != 0 && len != *j)
 		name = ft_strnduplen(line, j, len);
 	return (name);
 }
@@ -78,11 +78,11 @@ int			ft_instruction(char *line, int *i, int *j, t_all **all)
 	char	*name;
 	int		nb_instruction;
 
-	if (!line || line[(*j)] == '\0')
-		return (0);
 	while (line[(*j)] && line[(*j)] < 33)
 		(*j)++;
-	if (!(name = serch_name_instruction(line, i, j)) || name[0] == '\0')
+	if (!line || line[(*j)] == '\0')
+		return (0);
+	if (!(name = serch_name_instruction(line, j)) || name[0] == '\0')
 		return (my_erormanager("", ft_tab(*i, *j, 0), 1));
 	if (line[(*j)] == SEPARATOR_CHAR)
 	{

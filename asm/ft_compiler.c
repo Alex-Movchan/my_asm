@@ -23,19 +23,15 @@ static t_all	*ft_new_all(t_all *all)
 	return (all);
 }
 
-static int		my_compile_file(int fd, char *str, char *name)
+static int		my_compile_file(int fd, char *name)
 {
 	int			i;
 	t_all		*all;
 
 	i = 0;
 	all = ft_new_all(NULL);
-	if (name_and_coment(fd, &i, &all) == -1)
-	{
-		ft_dell_all(&all);
-		return (0);
-	}
-	if (translation_into_bytcode(fd, &i, NULL, &all) == -1)
+	if (name_and_coment(fd, &i, &all) == -1 ||
+			translation_into_bytcode(fd, &i, NULL, &all) == -1)
 	{
 		ft_dell_all(&all);
 		return (0);
@@ -58,12 +54,15 @@ int				ft_compiler(char *str, char *name)
 	}
 	if ((fd = open(str, O_RDONLY)) == -1)
 	{
-		ft_printf("%{fd}s %{fd}s", 2, "Can't read source file", 2, str);
+		ft_printf("%{fd}s %{fd}s\n", 2, "Can't read source file", 2, str);
 		close(fd);
 		return (0);
 	}
-	else if (!my_compile_file(fd, str, name))
+	else if (!my_compile_file(fd, name))
+	{
+		close(fd);
 		return (0);
+	}
 	close(fd);
 	return (1);
 }

@@ -43,3 +43,18 @@ int			valid_registr(char *str, int *tab, int *j, t_prog **prog)
 	(*prog)->value[tab[1]] = nb;
 	return (T_REG);
 }
+
+int			ft_stop_valod(char **line, int stop)
+{
+	if (*line)
+		ft_strdel(line);
+	*line = NULL;
+	if (stop == 2)
+		return (1);
+	else
+	{
+		ft_printf("%{fd}s{fd}\n", 2,
+			"Syntax error at token [TOKEN][001:001] END \"(null)\"", 2);
+		return (-1);
+	}
+}

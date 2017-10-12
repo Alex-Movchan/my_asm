@@ -32,7 +32,7 @@ static int		size_argument(t_prog *prg)
 	return (size);
 }
 
-unsigned int	ft_size_program(t_all **all, t_prog *prog)
+unsigned int	ft_size_program(t_prog *prog)
 {
 	unsigned int	size;
 

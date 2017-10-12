@@ -59,7 +59,7 @@ int					valid_direkt(char *str, int *i, int *j, t_prog **prog);
 int					valid_registr(char *str, int *tab, int *j, t_prog **prog);
 int					valid_indir(char *str, int *tab, int *j, t_prog **prog);
 int					ft_coding_byt(t_prog *prog);
-unsigned int		ft_size_program(t_all **all, t_prog *prog);
+unsigned int		ft_size_program(t_prog *prog);
 int					ft_search_availability_label(t_all **all);
 void				ft_write_program(t_all *all, char *str);
 int					ft_coment(char *line);
@@ -67,5 +67,7 @@ int					name_and_coment(int fd, int *i, t_all **all);
 char				*serch_coment(char *lin);
 void				ft_dell_all(t_all **all);
 int					ft_islabel(char *str, int *i, int *j, t_prog **prog);
+int					last_byt(int fd);
+int					ft_stop_valod(char **line, int stop);
 
 #endif

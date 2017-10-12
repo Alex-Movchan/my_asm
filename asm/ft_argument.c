@@ -51,10 +51,7 @@ static int		serch_argument(char **agr, int *i, int *j, t_all **all)
 		if (valid_argument(agr[k], ft_tab(*i, k, 0), j, &prog) == -1)
 			return (-1);
 		if ((g_tab[prog->i].arg[k] & prog->arg[k]) != prog->arg[k])
-		{
-			return (my_erormanager(ft_strdup(
-					g_tab[prog->i].name), ft_tab(0, 0, k), 4));
-		}
+			return (my_erormanager(g_tab[prog->i].name, ft_tab(0, 0, k), 4));
 		if (k > g_tab[prog->i].count_arg)
 			return (my_erormanager(g_tab[prog->i].name, ft_tab(0, 0, k), 4));
 		(*j) += ft_strlen(agr[k]) - 1;
@@ -63,7 +60,7 @@ static int		serch_argument(char **agr, int *i, int *j, t_all **all)
 		prog->coding_byte = ft_coding_byt(prog);
 	if (k != g_tab[prog->i].count_arg)
 		return (my_erormanager(g_tab[prog->i].name, ft_tab(0, 0, 0), 3));
-	(*all)->header->prog_size += ft_size_program(all, prog);
+	(*all)->header->prog_size += ft_size_program(prog);
 	return (0);
 }
 
