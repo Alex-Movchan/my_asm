@@ -50,7 +50,11 @@ int			main(int argc, char **argv)
 
 	i = 1;
 	if (argc == 1)
+	{
+		ft_printf("\a{fd}Usage: ./asm [-all] <sourcefile.s>\n\t%{fd}s\n", 2, 2,
+		"-all : compiles all the arguments\n");
 		return (0);
+	}
 	else if (argc > 1 && !ft_strcmp(argv[1], "-all"))
 	{
 		while (++i < argc)
