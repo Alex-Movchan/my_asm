@@ -6,7 +6,7 @@
 /*   By: amovchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/14 18:25:51 by amovchan          #+#    #+#             */
-/*   Updated: 2017/09/14 18:25:55 by amovchan         ###   ########.fr       */
+/*   Updated: 2017/10/12 20:36:15 by amovchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,8 @@ static void	my_erormanager_2(char *str, int *tab, int error)
 		"%{fd}s{fd}\"\n", 2, 2, tab[2], 2, tab[0], 2, 2, tab[1], 2, 2, str, 2);
 	else if (error == 6)
 		ft_printf("{fd}No such label %{fd}s {fd}while attempting to "
-			"dereference token [TOKEN][%{fd}03d{fd}:%{fd}03d{fd}] DIRECT_LABEL \":"
-			"%{fd}s{fd}\"\n", 2, 2, str, 2, 2, tab[0], 2, 2, tab[1], 2, 2, str, 2);
+		"dereference token [TOKEN][%{fd}03d{fd}:%{fd}03d{fd}] DIRECT_LABEL \":"
+		"%{fd}s{fd}\"\n", 2, 2, str, 2, 2, tab[0], 2, 2, tab[1], 2, 2, str, 2);
 	else if (error == 8)
 		ft_printf("{fd}Champion name too long (Max length 128)\n", 2);
 	else if (error == 9)
