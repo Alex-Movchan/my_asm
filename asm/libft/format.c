@@ -6,7 +6,7 @@
 /*   By: amovchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/23 16:09:05 by amovchan          #+#    #+#             */
-/*   Updated: 2017/03/23 12:53:21 by amovchan         ###   ########.fr       */
+/*   Updated: 2017/10/12 20:59:54 by amovchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,7 @@ int		ft_format(const char *format, va_list ap)
 	i = -1;
 	res = 0;
 	list = (t_srt*)malloc(sizeof(t_srt));
+	list->fd = 1;
 	va_copy(tmp, ap);
 	while (format[++i] != '\0')
 	{
